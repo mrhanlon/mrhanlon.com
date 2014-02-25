@@ -2,18 +2,26 @@ extends ../layouts/base
 block head
   title $> whois
 block content
-  h1
-    code $> whois
+  h1.highlight
+    pre $> whois mrhanlon
 
   p .
-    Hi, I'm Matt! I'm a developer living in Austin. I mostly develop web
+    Hi, I'm Matt! I'm a software developer living in Austin. I mostly develop web
     applications for scientists to help them be more productive in their science.
     Whether it's data management, point-and-click access to computational resources,
     or the more mundane, I help to make sure scientists and researchers can focus
     more time and effort on their science, and not the technology that has become
-    inextricable from large-scale, comuptationally- or data-intensive science.
+    inextricable from large-scale, computationally- or data-intensive science.
 
-  h2 Curriculum Vitae
+  .social-media-2
+    a.fa.fa-github(href="https://github.com/mrhanlon")
+    a.fa.fa-bitbucket(href="https://bitbucket.org/mrhanlon")
+    a.fa.fa-twitter(href="https://twitter.com/mattorantimatt")
+    a.fa.fa-linkedin(href="https://linkedin.com/in/mrhanlon")
+
+  h2 Curriculum Vitae&nbsp;
+    a(href='/files/mrhanlon_cv.pdf', title='Download my CV')
+      i.fa.fa-cloud-download
 
   h3 Current position
 
@@ -33,34 +41,34 @@ block content
   h3 Appointments held
 
   div
-    small.pull-right 2010 &ndash; present
+    span.label.label-default.pull-right 2010 &ndash; present
     span Texas Advanced Computing Center, The University of Texas at Austin
 
   h3 Education
 
   div
-    small.pull-right 2009
+    span.label.label-default.pull-right 2009
     span MS in Computer Science, The University of South Alabama, Mobile, Alabama
   div
-    small.pull-right 2003
+    span.label.label-default.pull-right 2003
     span BS in Mathematics, Spring Hill College, Mobile, Alabama
 
   h3 Grants, honors, &amp; awards
 
   div
-    small.pull-right 2010 &ndash; 2011
+    span.label.label-default.pull-right 2010 &ndash; 2011
     span Outstanding Master’s Thesis - University of South Alabama
   div
-    small.pull-right 2008
+    span.label.label-default.pull-right 2008
     span Outstanding Graduate Student - University of South Alabama
   div
-    small.pull-right 2008
+    span.label.label-default.pull-right 2008
     span CIS Graduate Fellowship - University of South Alabama
   div
-    small.pull-right 2003
+    span.label.label-default.pull-right 2003
     span Presidents Honors in Mathematics - Spring Hill College
   div
-    small.pull-right 2003
+    span.label.label-default.pull-right 2003
     span Hutchinson Award, Philosophy - Spring Hill College
 
   h3 Selected publications &amp; talks
@@ -68,41 +76,46 @@ block content
   h4 Journal articles
 
   div
-    small.pull-right 2014
+    span.label.label-default.pull-right 2014
     span M. Hanlon, W. Smith, S. Mock, &#8220;Providing resource information to users of a national computing center&#8221;. [Special issue] <i>Concurrency and Computation: Practice and Experience</i>.
 
   h4 Conference proceedings
 
   div
-    small.pull-right 2011
+    span.label.label-default.pull-right 2011
     span M. Hanlon, et al., &#8220;Benefits of NoSQL databases for portals &amp; science gateways&#8221;. Proceedings of the TeraGrid Conference: Extreme Digital Discovery.
 
   div
-    small.pull-right 2010
+    span.label.label-default.pull-right 2010
     span M.R. Hanlon, et al., &#8220;My-Plant.org: A phylogenetically structured social network&#8221;. Gateway Computing Environments Workshop (GCE).
 
   h4 Presentations
 
   div
-    small.pull-right 2013
+    span.label.label-default.pull-right 2013
     span &#8220;Using Liferay as a platform for Computational Science&#8221;. Liferay North American Symposium, San Francisco, USA.
 
   div
-    small.pull-right 2013
+    span.label.label-default.pull-right 2013
     span &#8220;Introduction to Science Gateways Workshop&#8221;. Elizabeth City State University, North Carolina, USA.
 
-  h3 Service to the profession
+  h3 Open source software contributions
 
-  h4 Open source software contributions
+  small (* - contributed to)
 
   ul
     li
       a(href='https://www.npmjs.org/package/commnq') CommnQ
+      &nbsp; - An AMQP library for Node.js with conveniences for running multiple tasks on AMQP messages.
     li
       a(href='https://github.com/Arabidopsis-Information-Portal') Arabidopsis Information Portal
+      &nbsp; - Various projects developed for the Arabidopsis Information Portal.
     li
       a(href='https://github.com/iPlantCollaborativeOpenSource') iPlant Collaborative
+      &nbsp; - Various projects developed by the iPlant Collaborative.
     li
       a(href='https://github.com/jknack/handlebars.java') Handlebars.java
+      | * - Logic-less and semantic Mustache templates with Java
     li
       a(href='https://github.com/stanlemon/jGrowl') jGrowl
+      | * - An unobtrusive notification system for web applications.
