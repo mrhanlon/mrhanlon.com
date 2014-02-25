@@ -15,6 +15,7 @@ html
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
     link(rel="icon", type="image/png", href="#{data.baseUrl}images/cabin.png")
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
     link(href="#{data.baseUrl}styles/main.css", rel="stylesheet")
     block head
       title= "mrhanlon"
@@ -24,16 +25,18 @@ html
         a(href="#{data.baseUrl}") mrhanlon
       .menu.icon-menu
       ul.nav-links
-        li.text-link
-          a(href="#{data.baseUrl}projects.html") projects
+        //li.text-link
+        //  a(href="#{data.baseUrl}projects.html") projects
         li.text-link
           a(href="#{data.baseUrl}archives.html") archives
         li.text-link
           a(href="#{data.baseUrl}about.html") about
 
       .social-media
-        a.icon-github(href="https://github.com/mrhanlon")
-        a.icon-twitter(href="https://twitter.com/mattorantimatt")
+        a.fa.fa-github(href="https://github.com/mrhanlon")
+        a.fa.fa-bitbucket(href="https://bitbucket.org/mrhanlon")
+        a.fa.fa-twitter(href="https://twitter.com/mattorantimatt")
+        a.fa.fa-linkedin(href="https://linkedin.com/in/mrhanlon")
     .content
       block content
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js", type="text/javascript")
