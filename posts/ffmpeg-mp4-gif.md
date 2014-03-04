@@ -1,7 +1,12 @@
 {
-  title: "Convert an MP4 to GIF with ffmpeg",
-  date:   "2014-02-25",
-  description: "With quality!"
+  title: "Convert an MP4 to GIF with ffmpeg"
+  , date:   "2014-02-25"
+  , description: "With quality!"
+  , tags: [
+    'ffmpeg'
+    , 'html5'
+    , 'video'
+  ]
 }
 
 With quality!
