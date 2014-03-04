@@ -98,12 +98,14 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', [
+  grunt.registerTask('test', [
     'clean',
     'pages',
     'compass',
     'copy'
   ]);
+
+  grunt.registerTask('build', 'test');
 
   grunt.registerTask('deploy', ['build', 'gh-pages']);
 
@@ -114,7 +116,7 @@ module.exports = function (grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('default', 'server');
+  grunt.registerTask('default', 'build');
 
   require('load-grunt-tasks')(grunt);
 };
