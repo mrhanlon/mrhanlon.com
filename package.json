@@ -1,6 +1,6 @@
  {
-  "name": "cabinjs-site",
-  "version": "0.0.0",
+  "name": "mrhanlon.com",
+  "version": "0.0.2",
   "devDependencies": {
     "grunt": "~0.4.1",
     "load-grunt-tasks": "~0.1.0",
