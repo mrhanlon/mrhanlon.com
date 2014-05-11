@@ -1,6 +1,16 @@
  {
   "name": "mrhanlon.com",
   "version": "0.0.2",
+  "description": "Code for mrhanlon.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrhanlon/mrhanlon.com.git"
+  },
+  "author": "Matthew R Hanlon <mrhanlon@mrhanlon.com>",
+  "bugs": {
+    "url": "https://github.com/mrhanlon/mrhanlon.com/issues"
+  },
+  "homepage": "https://mrhanlon.com",
   "devDependencies": {
     "grunt": "~0.4.1",
     "load-grunt-tasks": "~0.1.0",
