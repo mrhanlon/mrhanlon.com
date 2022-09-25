@@ -1,0 +1,46 @@
+// Dark Green (#051F20)
+// Phthalo Green (#0B2B26)
+// Medium Jungle Green (#163832)
+// Brunswick Green (#235347)
+// Dark Sea Green (#8EB69B)
+// Chinese White (#DAF1DE)
+
+@import "theme";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  @include theme('color', $primary-text-color);
+  @include theme('background-color', $background-color);
+
+  ::selection {
+    @include theme('color', $selection-text-color);
+    @include theme('background-color', $selection-background-color);
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    @include theme('color', $link-hover-text-color);
+  }
+
+  transition: color 500ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
