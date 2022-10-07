@@ -5,14 +5,14 @@ module.exports = shipit => {
   shipit.initConfig({
     default: {
       repositoryUrl: 'https://github.com/mrhanlon/mrhanlon.com.git',
-      branch: 'next',
+      branch: 'main',
     },
     production: {
       servers: [{
         host: 'mrhanlon.com',
         user: 'mrhanlon',
       }],
-      branch: 'next',
+      branch: 'main',
       deployTo: '/var/www/html/mrhanlon-nextjs',
       dirToCopy: 'out/',
       keepReleases: 2,
