@@ -12,6 +12,7 @@ $secondary-text-color: 'secondary-text-color';
 $link-hover-text-color: 'link-hover-text-color';
 $selection-text-color: 'selection-text-color';
 $background-color: 'background-color';
+$secondary-background-color: 'secondary-background-color';
 $selection-background-color: 'selection-background-color';
 
 
@@ -22,6 +23,7 @@ $themes: (
                 $link-hover-text-color: #235347,
                 $selection-text-color: #051F20,
                 $background-color: #FFFFFF,
+                $secondary-background-color: #163832,
                 $selection-background-color: lighten(#8EB69B, 25%),
         ),
         $dark-theme: (
@@ -30,6 +32,7 @@ $themes: (
                 $link-hover-text-color: #235347,
                 $selection-text-color: #0B2B26,
                 $background-color: #051F20,
+                $secondary-background-color: #163832,
                 $selection-background-color: lighten(#8EB69B, 25%),
         ),
 );
