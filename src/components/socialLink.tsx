@@ -7,10 +7,11 @@ interface Props {
   icon: IconDefinition;
   href: string;
   title?: string;
+  rel?: string;
 }
 
-const SocialLink = ({icon, href, title}: Props) => (
-  <a href={href} className={styles.social}>
+const SocialLink = ({icon, href, title, rel}: Props) => (
+  <a href={href} className={styles.social} rel={rel}>
     <FontAwesomeIcon icon={icon} title={title} />
   </a>
 );

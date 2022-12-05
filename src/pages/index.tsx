@@ -6,6 +6,7 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub'
 import {faBitbucket} from '@fortawesome/free-brands-svg-icons/faBitbucket'
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons/faLinkedin'
 import {faTwitter} from '@fortawesome/free-brands-svg-icons/faTwitter'
+import {faMastodon} from '@fortawesome/free-brands-svg-icons/faMastodon'
 import {faCloudDownload} from "@fortawesome/free-solid-svg-icons/faCloudDownload";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {dom} from "@fortawesome/fontawesome-svg-core";
@@ -41,6 +42,8 @@ const Home: NextPage = () => {
                                 href={'//linkedin.com/in/mrhanlon'}/>
                     <SocialLink title={'Twitter'} icon={faTwitter}
                                 href={'//twitter.com/mattorantimatt'}/>
+                    <SocialLink title={'Mastodon'} icon={faMastodon}
+                                href={'https://mstdn.social/@mattorantimatt'} rel={'me'}/>
                 </div>
 
                 <h2>
