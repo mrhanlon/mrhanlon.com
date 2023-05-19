@@ -15,31 +15,39 @@ interface VideoFormat {
     url: string;
 }
 
-const WalshBand: NextPage = () => {
+const WalshBandSpring2023: NextPage = () => {
     const videos: Video[] = [
         {
-            title: 'Chamber Ensemble, Oct. 6, 2022',
-            description: 'Procession of the Nobles, Saxophone Ensemble',
+            title: 'Extremis',
+            description: 'by Randall Standridge',
             formats: [{
-                url: 'https://mrhanlon.com/files/chamber-ensemble-2022-10-06.mp4',
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-extremis.mp4',
                 format: 'video/mp4',
-            }],
-        },
-        {
-            title: 'Walsh Symphonic Band Spring Concert 2022',
-            formats: [{
-                url: 'https://mrhanlon.com/files/walsh-symphonic-band-spring-2022.mp4',
-                format: 'video/mp4',
-            }],
-        },
-        {
-            title: 'Walsh Symphonic Band Winter Concert 2021',
-            formats: [{
-                url: 'https://mrhanlon.com/files/walsh-winter-concert-2021.webm',
-                format: 'video/webm',
             }, {
-                url: 'https://mrhanlon.com/files/walsh-winter-concert-2021.mp4',
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-extremis.webm',
+                format: 'video/webm',
+            }],
+        },
+        {
+            title: 'Call of the Wild',
+            description: 'by Brian Balmages',
+            formats: [{
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-call-of-the-wild.mp4',
                 format: 'video/mp4',
+            }, {
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-call-of-the-wild.webm',
+                format: 'video/webm',
+            }],
+        },
+        {
+            title: 'The Incredibles',
+            description: 'by Michael Giacchino, arr. Murtha',
+            formats: [{
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-incredibles.mp4',
+                format: 'video/mp4',
+            }, {
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-incredibles.webm',
+                format: 'video/webm',
             }],
         },
     ];
@@ -54,11 +62,11 @@ const WalshBand: NextPage = () => {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Walsh Band Videos: 2021-22</title>
+                <title>Walsh Symphonic Band: Spring Concert, 2023</title>
                 <style>{dom.css()}</style>
             </Head>
             <main className={styles.main}>
-                <h1>Walsh Band Videos</h1>
+                <h1>Walsh Symphonic Band: Spring Concert, 2023</h1>
                 <div className={styles.videos}>
                     <div className={styles.videoDisplay}>
                         <video ref={videoRef} controls>
@@ -82,4 +90,4 @@ const WalshBand: NextPage = () => {
     );
 };
 
-export default WalshBand;
+export default WalshBandSpring2023;
