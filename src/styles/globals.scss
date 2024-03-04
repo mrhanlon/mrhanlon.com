@@ -29,6 +29,7 @@ a {
 
   &:hover {
     @include theme('color', $link-hover-text-color);
+    text-decoration: underline;
   }
 
   transition: color 500ms;

@@ -23,7 +23,7 @@ module.exports = shipit => {
 
   shipit.blTask('build', async function() {
     await shipit.local('yarn install', {cwd: shipit.workspace});
-    await shipit.local('yarn export', {cwd: shipit.workspace});
+    await shipit.local('yarn build', {cwd: shipit.workspace});
 
     shipit.emit('built')
   })

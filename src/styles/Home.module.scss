@@ -65,7 +65,9 @@
 }
 
 .social_links {
-  margin-bottom: 2rem;
+  margin: 0.5rem 0 1.5rem;
+  display: flex;
+  gap: 0.25rem;
 }
 
 .code {
@@ -78,8 +80,7 @@
 }
 
 .social {
-  display: inline-block;
-  margin: .25em;
+  font-size: 1.5rem;
 }
 
 .specialization {}
