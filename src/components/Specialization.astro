@@ -1,0 +1,15 @@
+---
+interface Props {
+    areas: string[];
+}
+
+const { areas } = Astro.props;
+---
+<style>
+    .area + .area:before {
+        content: ' \2022  ';
+    }
+</style>
+<div>
+    {areas.map((a) => <span class="area">{a}</span>)}
+</div>

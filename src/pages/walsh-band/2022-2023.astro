@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import VideoPlayer from "../../components/VideoPlayer.astro";
+import type {Video} from "../../types/Video";
+import CSS from "../../styles/WalshBand.module.scss";
+
+const videos: Video[] = [
+    {
+        title: 'Extremis',
+        description: 'by Randall Standridge',
+        formats: [
+            {
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-extremis.mp4',
+                format: 'video/mp4'
+            },
+            {
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-extremis.webm',
+                format: 'video/webm'
+            }
+        ]
+    },
+    {
+        title: 'Call of the Wild',
+        description: 'by Brian Balmages',
+        formats: [
+            {
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-call-of-the-wild.mp4',
+                format: 'video/mp4'
+            },
+            {
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-call-of-the-wild.webm',
+                format: 'video/webm'
+            }
+        ]
+    },
+    {
+        title: 'The Incredibles',
+        description: 'by Michael Giacchino, arr. Murtha',
+        formats: [
+            {
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-incredibles.mp4',
+                format: 'video/mp4'
+            },
+            {
+                url: 'https://mrhanlon.com/files/walsh-symphonic-band/spring-2023/walsh-symphonic-band-spring-2023-incredibles.webm',
+                format: 'video/webm'
+            }
+        ]
+    }
+];
+---
+<Layout title="Walsh Band Videos: 2022-23">
+    <div class={CSS.container}>
+        <main class={CSS.main}>
+            <a href="/walsh-band">&larr;Back to Walsh Band</a>
+            <h1>Walsh Band Videos: 2022-23</h1>
+            <VideoPlayer videos={videos}/>
+        </main>
+    </div>
+</Layout>
