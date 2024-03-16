@@ -1,50 +1,50 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import VideoPlayer from "../../components/VideoPlayer.astro";
-import type {Video} from "../../types/Video";
-import CSS from "../../styles/WalshBand.module.scss";
+import Layout from '../../layouts/Layout.astro';
+import VideoPlayer from '../../components/VideoPlayer.astro';
+import type { Video } from '../../types/Video';
+import CSS from '../../styles/WalshBand.module.scss';
 
 const videos: Video[] = [
-    {
-        title: 'Chamber Ensemble, Oct. 6, 2022',
-        description: 'Procession of the Nobles, Saxophone Ensemble',
-        formats: [
-            {
-                url: 'https://mrhanlon.com/files/chamber-ensemble-2022-10-06.mp4',
-                format: 'video/mp4'
-            }
-        ]
-    },
-    {
-        title: 'Walsh Symphonic Band Spring Concert 2022',
-        formats: [
-            {
-                url: 'https://mrhanlon.com/files/walsh-symphonic-band-spring-2022.mp4',
-                format: 'video/mp4'
-            }
-        ]
-    },
-    {
-        title: 'Walsh Symphonic Band Winter Concert 2021',
-        formats: [
-            {
-                url: 'https://mrhanlon.com/files/walsh-winter-concert-2021.webm',
-                format: 'video/webm'
-            },
-            {
-                url: 'https://mrhanlon.com/files/walsh-winter-concert-2021.mp4',
-                format: 'video/mp4'
-            }
-        ]
-    }
+  {
+    title: 'Chamber Ensemble, Oct. 6, 2022',
+    description: 'Procession of the Nobles, Saxophone Ensemble',
+    formats: [
+      {
+        url: 'https://mrhanlon.com/files/chamber-ensemble-2022-10-06.mp4',
+        format: 'video/mp4'
+      }
+    ]
+  },
+  {
+    title: 'Walsh Symphonic Band Spring Concert 2022',
+    formats: [
+      {
+        url: 'https://mrhanlon.com/files/walsh-symphonic-band-spring-2022.mp4',
+        format: 'video/mp4'
+      }
+    ]
+  },
+  {
+    title: 'Walsh Symphonic Band Winter Concert 2021',
+    formats: [
+      {
+        url: 'https://mrhanlon.com/files/walsh-winter-concert-2021.webm',
+        format: 'video/webm'
+      },
+      {
+        url: 'https://mrhanlon.com/files/walsh-winter-concert-2021.mp4',
+        format: 'video/mp4'
+      }
+    ]
+  }
 ];
 ---
 <Layout title="Walsh Band Videos: 2021-22">
-    <div class={CSS.container}>
-        <main class={CSS.main}>
-            <a href="/walsh-band">&larr;Back to Walsh Band</a>
-            <h1>Walsh Band Videos: 2021-22</h1>
-            <VideoPlayer videos={videos}/>
-        </main>
-    </div>
+  <div class={CSS.container}>
+    <main class={CSS.main}>
+      <a href="/walsh-band">&larr;Back to Walsh Band</a>
+      <h1>Walsh Band Videos: 2021-22</h1>
+      <VideoPlayer videos={videos} />
+    </main>
+  </div>
 </Layout>

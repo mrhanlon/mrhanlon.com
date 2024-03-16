@@ -14,6 +14,7 @@ export default defineConfig({
         "github",
         "twitter",
         "mastodon",
+        "heart-broken",
       ],
     }
   })]
