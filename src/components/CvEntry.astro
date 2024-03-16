@@ -1,0 +1,47 @@
+---
+interface Props {
+    year?: number | string;
+    endYear?: number | string;
+}
+
+const { year, endYear } = Astro.props;
+---
+<style>
+    .entry {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: .75em;
+        width: 100%;
+    }
+
+    .text {
+        flex: 1;
+    }
+
+    .year {
+        margin-left: 0.5rem;
+        font-size: 0.8rem;
+        padding: .1rem .3rem;
+        background-color: #ccc;
+        border: 1px solid #c6c6c6;
+        border-radius: .25em;
+        white-space: nowrap;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: #464646;
+            border-color: #464646;
+        }
+    }
+</style>
+<div>
+    <div class="entry">
+        <div class="text">
+            <slot/>
+        </div>
+        {year && (
+            <div class="year">
+                {year}{endYear && <>&ndash;{endYear}</>}
+            </div>
+        )}
+    </div>
+</div>

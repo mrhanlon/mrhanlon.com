@@ -1,0 +1,65 @@
+---
+import CSS from '../styles/VideoPlayer.module.scss';
+import type {Video} from '../types/Video';
+
+interface Props {
+    videos: Video[];
+}
+
+let {videos} = Astro.props;
+let activeVideo = videos[0];
+---
+<div class={CSS.videos}>
+    <div class={CSS.videoDisplay}>
+        <video class="active-video" controls>
+            {activeVideo.formats.map((vf) =>
+                    <source src={vf.url} type={vf.format}/>)}
+        </video>
+        <h5>{activeVideo.title}</h5>
+        {activeVideo.description && <p>{activeVideo.description}</p>}
+    </div>
+    <nav class={CSS.navigation}>
+        <ul class={CSS.navList}>
+            {videos.map((v, index) => (
+                    <li class:list={[CSS.navItem, {[CSS.selected]: index === 0}]}
+                        data-video-index={index}>
+                        <a role={'button'}>{v.title}</a>
+                    </li>
+            ))}
+        </ul>
+    </nav>
+</div>
+<script is:inline define:vars={{
+    videos,
+    videoClass: CSS.videoDisplay,
+    itemClass: CSS.navItem,
+    selectedClass: CSS.selected
+}}>
+    const videoDisplay = document.querySelector(`.${videoClass} video`);
+    const navItems = document.querySelectorAll(`.${itemClass}`);
+    const videoLinks = document.querySelectorAll(`.${itemClass} a`);
+
+    videoLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const item = e.target.closest('li');
+            if (!item) return;
+            const index = item.dataset.videoIndex;
+            if (!index) return;
+            const video = videos[index];
+            if (!video) return;
+
+            videoDisplay.innerHTML = '';
+            video.formats.forEach(vf => {
+                const source = document.createElement('source');
+                source.src = vf.url;
+                source.type = vf.format;
+                videoDisplay.appendChild(source);
+            });
+            videoDisplay.load();
+            videoDisplay.play();
+            navItems.forEach(item => item.classList.remove(selectedClass));
+            item.classList.add(selectedClass);
+        });
+    });
+</script>

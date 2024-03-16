@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+---
+<Layout title="Not Found">
+  <main style="display: flex; flex-direction: column; align-items: center">
+    <h1>Uh-oh!</h1>
+    <Icon name="mdi:heart-broken" size={200} />
+    <p>Looks like this page doesn't exist.</p>
+  </main>
+</Layout>
